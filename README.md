@@ -45,7 +45,7 @@ POST用与上传文件，其参数Key为"file",Value是任意不超过10MB的文
 
     DELETE ${url}/${filepath}
 
-可以删除filepath指定目录和文件名的文件。
+可以删除filepath指定目录和文件名的文件。
 
 ## 实现截图
 
