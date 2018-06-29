@@ -6,20 +6,20 @@ mdfs-datanode-server下的工程为DataNode
 
 ## 使用说明
 
-1.NameNode可以直接启动
+1.NameNode可以直接启动
 
-2.DataNode每次启动时需要更改配置文件 resources/application.yml下的server.port与
-spring.application.name，想要启动不同的实例需要给每一个节点配置不同的端口号跟名字。
+2.DataNode每次启动时需要更改配置文件 resources/application.yml下的server.port与
+spring.application.name，想要启动不同的实例需要给每一个节点配置不同的端口号跟名字。
 
 ## Eureka
 
 NameNode为Eureka Server，可以用来发现服务
 
-DataNode为Eureka Client，可以想Server注册服务。
+DataNode为Eureka Client，可以向Server注册服务。
 
 ## 接口
 
-> 接口均采用RestController接口
+> 接口均采用RestController接口
 
 NameNode提供了3个接口，分别为GET POST DELETE
 
@@ -39,7 +39,7 @@ POST用与上传文件，其参数Key为"file",Value是任意不超过10MB的文
 
     POST ${url}/${path}
 
-可以向指定的path目录中上传文件，若目录不存在会默认创建整个路路径的目录
+可以向指定的path目录中上传文件，若目录不存在会默认创建整个路路径的目录
 
 ### 3.DELETE
 
@@ -47,13 +47,13 @@ POST用与上传文件，其参数Key为"file",Value是任意不超过10MB的文
 
 可以删除filepath指定目录和文件名的文件。
 
-## 实现截图
+## 实现截图
 
 ### 1.上传文件
 
 ![截图2](./readme_img/Upload.png)
 
-### 2.获取文件目录
+### 2.获取文件目录
 
 ![截图2](./readme_img/FileList.png)
 
@@ -64,11 +64,11 @@ POST用与上传文件，其参数Key为"file",Value是任意不超过10MB的文
 ![截图3a](./readme_img/Download_And_Save.png)
 
 
-这里如果不进行保存，会在下面返回结果的Body显示文件的内容，因为这里测试的是用的文本文件，所以可以直接看到该文件的内容
+这里如果不进行保存，会在下面返回结果的Body显示文件的内容，因为这里测试的是用的文本文件，所以可以直接看到该文件的内容
 
 ![截图3b](./readme_img/Download_Without_Save.png)
 
-### 4.删除文件
+### 4.删除文件
 
-![截图4](./readme_img/Delete.png)
+![截图4](./readme_img/Delete.png)
 # dev-mdfs-microserver
